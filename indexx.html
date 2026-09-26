@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Link bio QUOC DOAN</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(110, 45, 190, .35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(0, 210, 230, .18),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #100d25,
+            #050914 50%,
+            #02171c
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* GRID BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(100, 120, 160, .15) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(100, 120, 160, .15) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    opacity: .5;
+    pointer-events: none;
+}
+
+
+/* MAIN CARD */
+.container {
+    position: relative;
+
+    width: 540px;
+    min-height: 790px;
+
+    padding: 30px 35px;
+
+    background: rgba(5, 11, 25, .9);
+
+    border: 1px solid rgba(0, 230, 255, .25);
+
+    box-shadow:
+        0 0 50px rgba(0, 220, 255, .05),
+        inset 0 0 40px rgba(100, 70, 200, .04);
+
+    clip-path: polygon(
+        0 0,
+        95% 0,
+        100% 5%,
+        100% 100%,
+        5% 100%,
+        0 95%
+    );
+}
+
+
+/* TOP NEON LINE */
+.top-line {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 185px;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #9b45ff
+    );
+
+    box-shadow: 0 0 15px #00eaff;
+}
+
+
+/* STATUS */
+.status {
+    margin-bottom: 22px;
+
+    color: #00eaff;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* AVATAR */
+.avatar-box {
+    width: 175px;
+    height: 175px;
+
+    margin: auto;
+    margin-bottom: 25px;
+
+    padding: 6px;
+
+    background: linear-gradient(
+        135deg,
+        #00eaff,
+        #9745ff,
+        #ff277e
+    );
+
+    clip-path: polygon(
+        12% 0,
+        100% 0,
+        100% 88%,
+        88% 100%,
+        0 100%,
+        0 12%
+    );
+
+    box-shadow:
+        0 0 20px rgba(160, 50, 255, .3);
+}
+
+
+.avatar {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    clip-path: polygon(
+        12% 0,
+        100% 0,
+        100% 88%,
+        88% 100%,
+        0 100%,
+        0 12%
+    );
+}
+
+
+/* NAME */
+.name {
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.25);
+}
+
+.name span {
+    color: white;
+}
+
+
+/* LEVEL */
+.level {
+    text-align: center;
+
+    color: #00eaff;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+
+/* LINKS */
+.links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.link {
+    position: relative;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 0 20px;
+
+    color: #e8eef5;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(25, 30, 45, .95),
+            rgba(10, 16, 30, .95)
+        );
+
+    border: 1px solid rgba(180,200,220,.08);
+
+    clip-path: polygon(
+        2% 0,
+        100% 0,
+        98% 100%,
+        0 100%
+    );
+
+    transition: .25s ease;
+}
+
+
+.link::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #00eaff;
+
+    box-shadow: 0 0 15px #00eaff;
+}
+
+
+.link:hover {
+    transform: translateX(6px);
+
+    border-color: rgba(0,235,255,.5);
+
+    box-shadow:
+        0 0 25px rgba(0,220,255,.1);
+}
+
+
+/* DOLLAR */
+.money {
+    color: #00ff78;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+
+/* ICON */
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 0 15px rgba(0,230,255,.2);
+}
+.facebook {
+  background-color: #3b5998;
+  color white;
+}
+
+
+/* TELEGRAM */
+.telegram {
+    background: #0088CC;
+    color: #052027;
+}
+
+
+/* ig */
+.instagram {
+    background: linear-gradient(
+        45deg,
+        #FEDA75,
+        #FA7E1E,
+        #D62976,
+        #962FBF,
+        #4F5BD5
+    );
+    color: white;
+}
+
+.zalo-blue {
+    background: #09dcea;
+    color: #052027;
+}
+
+
+/* Locket */
+.locket {
+    background: yellow;
+    color: #0B192C;
+}
+
+
+/* ARROW */
+.arrow {
+    margin-left: auto;
+
+    color: #00eaff;
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+/* SOUND BUTTON */
+.sound {
+    position: fixed;
+
+    right: 18px;
+    bottom: 12px;
+
+    width: 72px;
+    height: 72px;
+
+    border: 1px solid #00eaff;
+
+    background: rgba(4,12,24,.85);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    clip-path: polygon(
+        17% 0,
+        100% 0,
+        100% 83%,
+        83% 100%,
+        0 100%,
+        0 17%
+    );
+}
+
+
+.sound::before {
+    content: "";
+
+    width: 31px;
+    height: 31px;
+
+    border: 3px solid #a443ff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 7px rgba(0,230,255,.12),
+        0 0 18px #7c38ff;
+}
+
+
+.sound::after {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #00eaff;
+
+    box-shadow:
+        0 0 12px #00eaff;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 94vw;
+        min-height: auto;
+
+        padding: 26px 18px 30px;
+    }
+
+    .avatar-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name {
+        font-size: 25px;
+    }
+
+    .link {
+        height: 63px;
+
+        padding: 0 15px;
+
+        font-size: 14px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div class="top-line"></div>
+    <div class="status">
+        LINK BIO PROFILE 
+    </div>
+
+    <!-- AVATAR -->
+    <div class="avatar-box">
+
+        <!-- Đổi link ảnh ở đây -->
+        <img
+            class="avatar"
+            src="image/9dca50ca-adc5-485b-9f08-7687ca64128c.jpg"
+            alt="QUOC DOAN "
+        >
+
+    </div>
+
+
+    <!-- NAME -->
+    <h1 class="name">
+        NGUYEN QUOC DOAN 
+    </h1>
+    <!-- LINKS -->
+    <div class="links">
+      <a
+            class="link"
+            href="https://www.facebook.com/nqdoan.0811"
+            target="_blank"
+        >
+
+            <span class="money">❤️</span>
+
+            <span class="icon facebook">
+                Facebook
+            </span>
+
+            <span>
+                FACEBOOK
+            </span>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </a>
+<a
+            class="link"
+            href="https://www.tiktok.com/@nguyenquocdoank9"
+            target="_blank"
+        >
+
+            <span class="money">❤️</span>
+
+            <span class="icon zalo-purple">
+                Tiktok 
+            </span>
+
+            <span>
+                TIKTOK
+            </span>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </a>
+        <a
+            class="link"
+            href="https://locket.cam/nguyenquocdoan2009"
+            target="_blank"
+        >
+
+            <span class="money">❤️</span>
+
+            <span class="icon locket">
+                Locket
+            </span>
+
+            <span>
+                LOCKET
+            </span>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </a>
+        
+        <a
+            class="link"
+            href="https://www.instagram.com/n.qdoan_09/"
+            target="_blank"
+        >
+
+            <span class="money">❤️</span>
+
+            <span class="icon instagram">
+                Instagram 
+            </span>
+
+            <span>
+                INSTAGRAM
+            </span>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </a>
+        <a
+            class="link"
+            href="https://zalo.me/0943457159"
+            target="_blank"
+        >
+
+            <span class="money">❤️</span>
+
+            <span class="icon zalo-blue">
+                Zalo
+            </span>
+
+            <span>
+               ZALO
+            </span>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </a>
+
+        <!-- TELEGRAM -->
+        <a
+            class="link"
+            href="https://t.me/nguyenquocdoan"
+            target="_blank"
+        >
+
+            <span class="money">❤️</span>
+
+            <span class="icon telegram">
+                Telegram
+            </span>
+
+            <span>
+                TELEGRAM
+            </span>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </a>
+    </div>
+
+</div>
+<audio id="bgMusic" loop autoplay >
+    <source src="ĂM CHÃ HÚI - LÂM THẰN LẰN (Official Music Video) _ KIND LABELS [qJhts_cgrqY].mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", () => {
+    music.play();
+}, { once: true });
+</script>
+
+
+
+
+</body>
+</html>
